@@ -14,13 +14,14 @@ while (userInput != randomNumber) {
         alert("Too low! Try again.");
     } else if (userInput > randomNumber) {
         alert("Too high! Try again.");
-    } else if (userInput == randomNumber) {
-        alert("Congratulations! You guessed the number in " + attempts + " attempts.");
-        break;
     } else {
         alert("Invalid input. Please enter a number between 1 and 10, or type 999 to exit.");
     }
     userInput = prompt("Guess a number between 1 and 10, or type 999 to exit.");
+}
+// Display winning message after loop exits
+if (userInput == randomNumber) {
+    alert("Congratulations! You guessed the number in " + attempts + " attempts.");
 }
 // Loop should count the number of guesses.
 // Loop should exit if user enters 999 and not display "Too high!"
